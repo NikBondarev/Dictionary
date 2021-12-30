@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    background-color: rgb(20, 24, 27);
+}
+div, p, a, span{
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, p, a{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+input, input:hover, input:focus, button:active, button:focus{
+    outline: none;
+}
+.full-screen{
+    padding-top: 35vh;
+}
+.screen__elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.screen__elements h1{
+    font-size: 36px;
+    color: rgb(151, 206, 211);
+}
+.inputs{
+    display: flex;
+    margin-top: 50px;
+}
+label{
+    display: block;
+    color:  rgb(151, 206, 211);
+    font-size: 25px;
+    font-weight: 900;
+}
+#germ, #rus{
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color:  rgb(20, 24, 27);
+    border-bottom: 3px solid rgb(151, 206, 211);
+    color: gainsboro;
+    border-radius: 3px;
+    transform: translateX(0);
+    transition: all .5s ease;
+}
+.inputs label:nth-child(2){
+    margin-left: 60px;
+}
+#btn{
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px solid rgb(151, 206, 211);
+    background-color: rgb(20, 24, 27);
+    color: gainsboro;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 40px;  
+    position: relative;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+#germ::placeholder, #rus::placeholder{
+    transform: translateX(0px); 
+    transition: all .5s ease;
+}
+
+#germ.error, #rus.error{
+    border-color: rgb(255, 60, 0);
+    color: rgb(255, 60, 0);
+}
+#germ.error::placeholder, #rus.error::placeholder{
+    color: rgb(255, 60, 0);
+}
+#germ:focus::placeholder, #rus:focus::placeholder{
+    transform: translateX(500px);
+    transition: all .5s ease;
+}
+#btn::before, #btn::after{
+    content: '';
+    background-color:  rgb(20, 24, 27);
+    width: 7px;
+    height: 1.9px;
+    position: absolute;
+    transform: skewx(45deg);
+    transition: .4s ease;
+}
+#btn::before{
+    top: -2px;
+}
+#btn:hover::before{
+    transform: translateX(110px) skewx(-45deg);
+}
+#btn::after{
+    bottom: -2.5px;
+    right: 15px;
+}
+#btn:hover::after{
+    transform: translateX(-110px) skewx(-45deg);
+}
+#table{
+    margin-top: 70px;
+    color: gainsboro;
+    border-color:  rgb(151, 206, 211);
+    
+}
+td{
+    width: 250px;
+    height: 50px;
+    text-align: center;
+}
+th,td{
+    border: 3px solid rgb(151, 206, 211);
+}
